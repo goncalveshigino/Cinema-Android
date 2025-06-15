@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MoviieAppTheme {
-                MainScreen(navController = rememberNavController())
+                MainScreen(navHostController = rememberNavController())
             }
         }
     }

@@ -7,8 +7,9 @@ import com.example.moviieapp.core.domain.model.Movie
 import com.example.moviieapp.movie_popular_feature.domain.repository.MoviePopularRepository
 import com.example.moviieapp.movie_popular_feature.domain.source.MoviePopularRemoteDataSource
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
-class MoviePopularRepositoryImpl constructor(
+class MoviePopularRepositoryImpl @Inject constructor(
     private val remoteDataSource: MoviePopularRemoteDataSource
 ) : MoviePopularRepository {
 

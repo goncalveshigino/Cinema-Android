@@ -4,8 +4,9 @@ import com.example.moviieapp.core.data.remote.MovieService
 import com.example.moviieapp.core.data.remote.response.MovieResponse
 import com.example.moviieapp.core.page.MoviePagingSource
 import com.example.moviieapp.movie_popular_feature.domain.source.MoviePopularRemoteDataSource
+import javax.inject.Inject
 
-class MoviePopularRemoteDataSourceImp constructor(
+class MoviePopularRemoteDataSourceImp @Inject constructor(
     private val service: MovieService
 ) : MoviePopularRemoteDataSource  {
 

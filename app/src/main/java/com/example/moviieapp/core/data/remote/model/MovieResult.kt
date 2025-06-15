@@ -20,7 +20,7 @@ data class MovieResult(
     @SerializedName("popularity")
     val popularity: Double,
     @SerializedName("posterPath")
-    val poster_path: String,
+    val posterPath: String,
     @SerializedName("release_date")
     val releaseDate: String,
     @SerializedName("title")

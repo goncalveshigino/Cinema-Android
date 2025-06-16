@@ -4,8 +4,8 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.moviieapp.core.domain.model.Movie
 import com.example.moviieapp.movie_popular_feature.domain.repository.MoviePopularRepository
-import jakarta.inject.Inject
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 
 interface  GetPopularMoviesUseCase {
@@ -20,8 +20,8 @@ class GetPopularMoviesUseCaseImpl @Inject constructor(
     override fun invoke(): Flow<PagingData<Movie>> {
         return repository.getPopularMovies(
             pagingConfig = PagingConfig(
-                pageSize = 20,
-                initialLoadSize = 20
+                pageSize = 5,
+                initialLoadSize = 5
             )
         )
     }

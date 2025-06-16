@@ -61,6 +61,9 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.56.2")
     ksp(libs.hilt.compiler)
 
+    // For Kotlin DSL build.gradle.kts
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
     //Retrofit
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")

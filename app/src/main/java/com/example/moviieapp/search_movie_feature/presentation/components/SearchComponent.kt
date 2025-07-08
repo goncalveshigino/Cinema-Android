@@ -21,7 +21,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.moviieapp.R
 import com.example.moviieapp.search_movie_feature.presentation.MovieSearchEvents
+import com.example.moviieapp.ui.theme.black
 import com.example.moviieapp.ui.theme.white
+import com.example.moviieapp.ui.theme.yellow
 
 @Composable
 fun SearchComponent(
@@ -41,12 +43,17 @@ fun SearchComponent(
                     onSearch(query)
                 }
             ) {
-                Icon(imageVector = Icons.Outlined.Search, contentDescription = null)
+                Icon(
+                    imageVector = Icons.Outlined.Search,
+                    contentDescription = null,
+                    tint = white
+                )
             }
         },
         placeholder = {
             Text(
-                text = stringResource(id = R.string.search_movies)
+                text = stringResource(id = R.string.search_movies),
+                color = white
             )
         },
         keyboardOptions = KeyboardOptions.Default.copy(
@@ -62,9 +69,8 @@ fun SearchComponent(
         ),
         colors = TextFieldDefaults.textFieldColors(
             textColor = white,
-            backgroundColor = white,
-            focusedIndicatorColor = white,
-            unfocusedIndicatorColor = white,
+            focusedIndicatorColor = yellow,
+            unfocusedIndicatorColor = black,
             cursorColor = white
         ),
         modifier = modifier

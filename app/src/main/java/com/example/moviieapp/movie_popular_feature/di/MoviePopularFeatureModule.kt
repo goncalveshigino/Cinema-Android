@@ -18,7 +18,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object MoviePopularFeatureModule {
 
-
     @Provides
     @Singleton
     fun provideMovieDataSource(service: MovieService):  MoviePopularRemoteDataSource {

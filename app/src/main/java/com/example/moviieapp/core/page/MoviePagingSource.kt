@@ -9,6 +9,12 @@ import com.example.moviieapp.movie_popular_feature.domain.source.MoviePopularRem
 import retrofit2.HttpException
 import java.io.IOException
 
+sealed class ResultData<out T> {
+    object Loading : ResultData<Nothing>()
+    data class Success<out T>(val data: T) : ResultData<T>()
+    data class Failure(val e: Exception) : ResultData<Nothing>()
+}
+
 class MoviePagingSource constructor(
     private val remoteDataSource: MoviePopularRemoteDataSource
 ) : PagingSource<Int, Movie>() {
